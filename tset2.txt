@@ -1,0 +1,27 @@
+	编译文件
+	colcon build --symlink-install
+	
+	
+	启动gazebo和ros2环境
+	source /opt/ros/humble/setup.bash
+	source install/setup.bash
+	source /usr/share/gazebo/setup.sh
+	启动仿真环境文件，可以改机器人数量，最大为3
+	ros2 launch start_rl_environment main.launch.py robot_number:=3
+
+
+
+	编译文件
+	colcon build --symlink-install
+	
+	启动gazebo和ros2环境
+	source /opt/ros/humble/setup.bash
+	source install/setup.bash
+	启动算法文件，可以改机器人数量，最大为3
+	ros2 launch start_reinforcement_learning start_learning.launch.py robot_number:=3
+	
+	
+	
+	
+	启动tensorboard
+	tensorboard --logdir=data/tensor
